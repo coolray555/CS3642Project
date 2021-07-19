@@ -27,10 +27,8 @@ namespace CS3642Project
             {
                 for (int j = 0; j < cities.Count; j++)
                 {
-                    edges.Add(new Edge(cities[i].Id, cities[j].Id));
-                    List<int> dist_list = cities[i].Dists;
                     float cur_dist = cities[i].calcDist(cities[j]);
-                    dist_list.Add(cur_dist);
+                    edges.Add(new Edge(cities[i].Id, cities[j].Id, cur_dist));
                 }
             }
 
